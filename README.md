@@ -26,3 +26,17 @@
 ### 10. Handling Images With Webpack
 
 1. Make changes in files as in the example
+
+### 11. publicPath
+
+1. Make changes in files as in the example
+2. `publicPath: 'https://mywebside.com/img'` - add to direct path to image
+
+### 12. Asset/inline Module Type
+
+
+
+## Learn
+
+1. How to add image to `dist/img`?
+2. How to add original filename to generated image filename?
