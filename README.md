@@ -18,3 +18,11 @@
 
 1. Make changes in files as in the example
 2. `npm run build` - start compilation with this command
+
+### 9. Introduction to Asset Modules
+
+1. No commit
+
+### 10. Handling Images With Webpack
+
+1. Make changes in files as in the example
