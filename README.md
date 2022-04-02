@@ -13,3 +13,8 @@
 1. Make changes in files as in the example
 2. `npx webpack`
 3. `npx webpack --stats detailed` - more details in output
+
+### 8. Custom Webpack Configuration
+
+1. Make changes in files as in the example
+2. `npm run build` - start compilation with this command
