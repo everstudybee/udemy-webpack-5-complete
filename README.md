@@ -34,9 +34,23 @@
 
 ### 12. Asset/inline Module Type
 
+1. No commit
+
+### 13. General Asset Type
+
+1. Make changes in files as in the example
+2. `type: 'asset'` - this way Webpack decide automatically how to divide small image as `asset/inline` and bigger as `asset/resource`
+3. `maxSize: 3 * 1024` - limit inline file size to 3 kilobytes
+4. Extra step, add `devServer` for automatic page reload.
+5. `npm install --save-dev webpack-dev-server` [Webpack DevServer](https://webpack.js.org/configuration/dev-server/)
+
+### 14. Asset/source Module Type
+
 
 
 ## Learn
 
 1. How to add image to `dist/img`?
-2. How to add original filename to generated image filename?
+2. Hot to take image from `src/img`? 
+3. How to add original filename to generated image filename?
+4. 

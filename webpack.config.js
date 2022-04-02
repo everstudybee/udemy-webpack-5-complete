@@ -7,14 +7,27 @@ module.exports = {
         clean: true,
         filename: 'bundle.js',
         path: path.resolve(__dirname, './dist'),
-        publicPath: 'dist/',
+        publicPath: '/dist/',
+    },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
+        compress: true,
+        port: 9999,
+        hot: true,
     },
     module: {
         rules: [
             {
                 test: /\.(png|gif|jpg|jpeg|svg|ico|webp)$/,
-                type: 'asset/resource',
-            }
+                type: 'asset',
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 3 * 1024,
+                    },
+                },
+            },
         ],
-    }
+    },
 };
