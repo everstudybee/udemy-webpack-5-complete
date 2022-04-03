@@ -1,5 +1,14 @@
-import helloWorld from './hello-world.js';
-import addImage from './add-image';
+import HelloWorldButton from './components/hello-world-button/hello-world-button.js';
+import duckImage from './components/duck-image/duck-image';
+import favicon from './favicon.svg';
 
-helloWorld();
-addImage();
+const head = document.querySelector('head');
+const link = document.createElement('link');
+link.rel = 'icon';
+link.href = favicon;
+head.appendChild(link);
+
+duckImage();
+
+const helloWorldButton = new HelloWorldButton();
+helloWorldButton.render();

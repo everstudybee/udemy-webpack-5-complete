@@ -51,7 +51,17 @@
 3. `npm install --save-dev html-webpack-plugin` - Install [HtmlWebpackPlugin](https://github.com/jantimon/html-webpack-plugin#install)
 4. `npm install --save-dev html-webpack-harddisk-plugin` - [HtmlWebpackHarddiskPlugin](https://github.com/jantimon/html-webpack-harddisk-plugin#installation) necessary to working with `devServer` and HMR
 
+### 15. What Is Webpack Loader?
 
+1. No commit
+
+### 16. Handling CSS With Webpack
+
+1. Make changes in files as in the example
+2. Organize element with components
+3. `npm install --save-dev css-loader style-loader` - install modules for css handling 
+
+### 17. Handling SASS
 
 
 
