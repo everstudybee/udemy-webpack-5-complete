@@ -18,6 +18,7 @@ duckImage.render();
 const helloWorldButton = new HelloWorldButton();
 helloWorldButton.render();
 
+// mode verification is not necessary
 if (process.env.NODE_ENV === 'production') {
     console.log('Production mode');
 } else if (process.env.NODE_ENV === 'development'){

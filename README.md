@@ -137,6 +137,14 @@
 
 1. Make changes in files as in the example
 
+### 32. Faster Development with webpack dev server
+
+1. Make changes in files as in the example
+
+### 33. Cleaning Up A Bit
+
+1. No commit
+
 
 
 

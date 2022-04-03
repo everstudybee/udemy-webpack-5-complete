@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -15,11 +16,14 @@ module.exports = {
         publicPath: '/dist/',
     },
     devServer: {
-        static: {
-            directory: path.join(__dirname, 'dist'),
-        },
-        compress: true,
         port: 9999,
+        static: {
+            directory: path.join(__dirname, './dist'),
+        },
+        devMiddleware: {
+            index: 'index.html',
+            writeToDisk: true,
+        },
         hot: true,
     },
     module: {
@@ -87,4 +91,12 @@ module.exports = {
             filename: 'css/style.[contenthash].css',
         }),
     ],
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                extractComments: false,
+            }),
+        ],
+    },
 };

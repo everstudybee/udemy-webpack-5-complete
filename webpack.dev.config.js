@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -9,16 +11,19 @@ module.exports = {
     },
     output: {
         clean: true,
-        filename: '[name].js',
+        filename: 'js/[name].js',
         path: path.resolve(__dirname, './dist'),
         publicPath: '/dist/',
     },
     devServer: {
-        static: {
-            directory: path.join(__dirname, 'dist'),
-        },
-        compress: true,
         port: 9999,
+        static: {
+            directory: path.join(__dirname, './dist'),
+        },
+        devMiddleware: {
+           index: 'index.html',
+           writeToDisk: false,
+        },
         hot: true,
     },
     module: {
@@ -32,7 +37,7 @@ module.exports = {
                     },
                 },
                 generator: {
-                    filename: 'img/[name].[hash][ext][query]',
+                    filename: 'img/[name][ext][query]',
                 },
             },
             {
@@ -42,14 +47,14 @@ module.exports = {
             {
                 test: /\.(css)$/,
                 use: [
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                 ],
             },
             {
                 test: /\.(scss)$/,
                 use: [
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
                 ],
@@ -82,5 +87,16 @@ module.exports = {
             description: 'Description in my file',
         }),
         new HtmlWebpackHarddiskPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'css/style.css',
+        }),
     ],
+    optimization: {
+        minimize: false,
+        minimizer: [
+            new TerserPlugin({
+                extractComments: false,
+            }),
+        ],
+    },
 };
