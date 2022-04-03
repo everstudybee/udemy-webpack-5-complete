@@ -7,7 +7,6 @@
 1. `npm init -y`
 2. `npm install --sava-dev webpack webpack-cli`
 
-
 ### 7. Integrating Webpack Into Our JS Application
 
 1. Make changes in files as in the example
@@ -59,7 +58,7 @@
 
 1. Make changes in files as in the example
 2. Organize element with components
-3. `npm install --save-dev css-loader style-loader` - install modules for css handling 
+3. `npm install --save-dev css-loader style-loader` - install modules for css handling
 
 ### 17. Handling SASS
 
@@ -172,7 +171,14 @@
 
 1. Make changes in files as in the example
 
+### 40. How To Setup Development Environment For Multiple Page Application
 
+1. Make changes in files as in the example
+2. Extra step, add menu and index.html
+
+### 41. How To Use Github Repository
+
+1. No commit
 
 
 
@@ -180,6 +186,35 @@
 
 
 ## Learn
+
+1. How to filter only favicon.svg og add to `dist/img`
+
+```js
+const confModuleRules =
+    {
+        test: /\.(png|gif|jpg|jpeg|svg|ico|webp)$/,
+        type: 'asset',
+        parser: {
+            dataUrlCondition: {
+                maxSize: 100,
+            },
+        },
+        generator: {
+            filename: 'img/[name][ext][query]',
+        },
+    }
+```
+```js
+const confModuleRulesSecond =
+    {
+        test: /\.(png|gif|jpg|jpeg|svg|ico|webp)$/,
+        type: 'asset/resource',
+        generator: {
+            filename: 'img/[name][ext][query]',
+        }
+    }
+```
+2. Unify two webpack configuration config file. Use function and parameters.
 
 ## Icons
 

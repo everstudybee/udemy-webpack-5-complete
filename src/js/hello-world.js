@@ -1,14 +1,13 @@
-import favicon from '../img/favicon.svg';
 import Header from '../components/header/header';
-import HelloWorldButton from '../components/hello-world-button/hello-world-button.js';
+import HelloWorldButton
+    from '../components/hello-world-button/hello-world-button.js';
 import DuckImage from '../components/duck-image/duck-image';
 import _ from 'lodash';
+import React from 'react';
+import TopMenu from '../components/top-menu/top-menu';
 
-const head = document.querySelector('head');
-const link = document.createElement('link');
-link.rel = 'icon';
-link.href = favicon;
-head.appendChild(link);
+const topMenu = new TopMenu();
+topMenu.render();
 
 const header = new Header();
 header.render(_.upperFirst('duck page'));
@@ -22,8 +21,8 @@ helloWorldButton.render();
 // mode verification is not necessary
 if (process.env.NODE_ENV === 'production') {
     console.log('Production mode');
-} else if (process.env.NODE_ENV === 'development'){
-    console.log('Development mode')
+} else if (process.env.NODE_ENV === 'development') {
+    console.log('Development mode');
 } else {
     console.log('Mode unknown');
 }

@@ -8,23 +8,14 @@ module.exports = {
     mode: 'production',
     entry: {
         index: './src/js/index.js',
+        'hello-world': './src/js/hello-world.js',
+        ship: './src/js/ship.js',
     },
     output: {
         clean: true,
-        filename: '[name].[contenthash].js',
+        filename: 'js/[name].[contenthash].bundle.js',
         path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist/',
-    },
-    devServer: {
-        port: 9999,
-        static: {
-            directory: path.join(__dirname, './dist'),
-        },
-        devMiddleware: {
-            index: 'index.html',
-            writeToDisk: true,
-        },
-        hot: true,
+        publicPath: 'auto',
     },
     module: {
         rules: [
@@ -37,7 +28,7 @@ module.exports = {
                     },
                 },
                 generator: {
-                    filename: 'img/[name].[hash][ext][query]',
+                    filename: 'img/[name][ext][query]',
                 },
             },
             {
@@ -81,14 +72,37 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             alwaysWriteToDisk: true,
-            filename: 'index.html',
-            template: 'src/html/index.hbs',
+            filename: 'hello-world.html',
+            chunks: ['hello-world'],
+            template: 'src/html/page-template.hbs',
             title: 'Hello World!!!',
-            description: 'Description in my file',
+            description: 'Description Hello World',
+            minify: true,
+            favicon: 'src/img/favicon.svg',
+        }),
+        new HtmlWebpackPlugin({
+            alwaysWriteToDisk: true,
+            filename: 'ship.html',
+            chunks: ['ship'],
+            template: 'src/html/page-template.hbs',
+            title: 'Hello Ship!!!',
+            description: 'Description Hello Ship',
+            minify: true,
+            favicon: 'src/img/favicon.svg',
+        }),
+        new HtmlWebpackPlugin({
+            alwaysWriteToDisk: true,
+            filename: 'index.html',
+            chunks: ['index'],
+            template: 'src/html/page-template.hbs',
+            title: 'Home!!!',
+            description: 'Description Home',
+            minify: true,
+            favicon: 'src/img/favicon.svg',
         }),
         new HtmlWebpackHarddiskPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'css/style.[contenthash].css',
+            filename: 'css/[name].[contenthash].style.css',
         }),
     ],
     optimization: {
@@ -98,5 +112,9 @@ module.exports = {
                 extractComments: false,
             }),
         ],
+        splitChunks: {
+            chunks: 'all',
+            minSize: 20000,
+        },
     },
 };

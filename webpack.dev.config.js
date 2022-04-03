@@ -7,12 +7,13 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
+        index: './src/js/index.js',
         'hello-world': './src/js/hello-world.js',
-        ship: './src/js/ship.js'
+        ship: './src/js/ship.js',
     },
     output: {
         clean: true,
-        filename: 'js/[name].js',
+        filename: 'js/[name].bundle.js',
         path: path.resolve(__dirname, './dist'),
         publicPath: '/dist/',
     },
@@ -22,8 +23,8 @@ module.exports = {
             directory: path.join(__dirname, './dist'),
         },
         devMiddleware: {
-           index: 'index.html',
-           writeToDisk: false,
+            index: 'index.html',
+            writeToDisk: false,
         },
         hot: true,
     },
@@ -88,6 +89,7 @@ module.exports = {
             title: 'Hello World!!!',
             description: 'Description Hello World',
             minify: false,
+            favicon: 'src/img/favicon.svg',
         }),
         new HtmlWebpackPlugin({
             alwaysWriteToDisk: true,
@@ -97,10 +99,21 @@ module.exports = {
             title: 'Hello Ship!!!',
             description: 'Description Hello Ship',
             minify: false,
+            favicon: 'src/img/favicon.svg',
+        }),
+        new HtmlWebpackPlugin({
+            alwaysWriteToDisk: true,
+            filename: 'index.html',
+            chunks: ['index'],
+            template: 'src/html/page-template.hbs',
+            title: 'Home!!!',
+            description: 'Description Home',
+            minify: false,
+            favicon: 'src/img/favicon.svg',
         }),
         new HtmlWebpackHarddiskPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
+            filename: 'css/[name].style.css',
         }),
     ],
     optimization: {
@@ -112,7 +125,7 @@ module.exports = {
         ],
         splitChunks: {
             chunks: 'all',
-            minSize: 3072,
-        }
+            minSize: 20000,
+        },
     },
 };
