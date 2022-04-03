@@ -82,10 +82,21 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             alwaysWriteToDisk: true,
-            filename: 'index.html',
-            template: 'src/html/index.hbs',
+            filename: 'hello-world.html',
+            chunks: ['hello-world'],
+            template: 'src/html/page-template.hbs',
             title: 'Hello World!!!',
-            description: 'Description in my file',
+            description: 'Description Hello World',
+            minify: false,
+        }),
+        new HtmlWebpackPlugin({
+            alwaysWriteToDisk: true,
+            filename: 'ship.html',
+            chunks: ['ship'],
+            template: 'src/html/page-template.hbs',
+            title: 'Hello Ship!!!',
+            description: 'Description Hello Ship',
+            minify: false,
         }),
         new HtmlWebpackHarddiskPlugin(),
         new MiniCssExtractPlugin({

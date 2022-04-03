@@ -160,7 +160,8 @@
 
 ### 37. How To Generate Multiple HTML Files
 
-
+1. Make changes in files as in the example (not full implementation)
+2. There are still not finish
 
 
 
