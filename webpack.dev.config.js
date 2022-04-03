@@ -7,7 +7,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
-        index: './src/index.js',
+        'hello-world': './src/js/hello-world.js',
+        ship: './src/js/ship.js'
     },
     output: {
         clean: true,
@@ -88,7 +89,7 @@ module.exports = {
         }),
         new HtmlWebpackHarddiskPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'css/style.css',
+            filename: 'css/[name].css',
         }),
     ],
     optimization: {

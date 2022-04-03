@@ -153,8 +153,12 @@
 
 1. Make changes in files as in the example
 
+### 36. Code Splitting in Webpack: Multiple JS and CSS Bundles
 
+1. Make changes in files as in the example (not full implementation)
+2. There are still bugs
 
+### 37. How To Generate Multiple HTML Files
 
 
 

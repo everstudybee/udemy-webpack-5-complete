@@ -1,7 +1,7 @@
-import favicon from './favicon.svg';
-import Header from './components/header/header';
-import HelloWorldButton from './components/hello-world-button/hello-world-button.js';
-import DuckImage from './components/duck-image/duck-image';
+import favicon from '../img/favicon.svg';
+import Header from '../components/header/header';
+import HelloWorldButton from '../components/hello-world-button/hello-world-button.js';
+import DuckImage from '../components/duck-image/duck-image';
 
 const head = document.querySelector('head');
 const link = document.createElement('link');
