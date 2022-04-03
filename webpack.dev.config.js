@@ -110,5 +110,8 @@ module.exports = {
                 extractComments: false,
             }),
         ],
+        splitChunks: {
+            chunks: 'all',
+        }
     },
 };

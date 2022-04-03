@@ -2,6 +2,7 @@ import favicon from '../img/favicon.svg';
 import Header from '../components/header/header';
 import HelloWorldButton from '../components/hello-world-button/hello-world-button.js';
 import DuckImage from '../components/duck-image/duck-image';
+import _ from 'lodash';
 
 const head = document.querySelector('head');
 const link = document.createElement('link');
@@ -10,7 +11,7 @@ link.href = favicon;
 head.appendChild(link);
 
 const header = new Header();
-header.render();
+header.render(_.upperFirst('duck page'));
 
 const duckImage = new DuckImage();
 duckImage.render();

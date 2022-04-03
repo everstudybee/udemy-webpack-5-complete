@@ -163,6 +163,15 @@
 1. Make changes in files as in the example (not full implementation)
 2. There are still not finish
 
+### 38. Extracting Common Dependencies While Code Splitting
+
+1. Make changes in files as in the example
+2. `npm install --save lodash`
+
+
+
+
+
 
 
 
