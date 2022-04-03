@@ -98,7 +98,11 @@
 3. Move image to `dist/img`
 4. Move css to `dist/css`
 
-### 
+### 24. How To Clean Dist Folder Before Generating New Bundles
+
+1. Make changes in files as in the example
+2. In Webpack 5 this step is not necessary. It is enough to add in `output -> clean: true`
+3. 
 
 
 

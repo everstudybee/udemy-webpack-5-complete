@@ -6,7 +6,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'none',
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+    },
     output: {
         clean: true,
         filename: '[name].[contenthash].js',
@@ -55,7 +57,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(js)$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -79,6 +81,10 @@ module.exports = {
     ],
     optimization: {
         minimize: true,
-        minimizer: [new TerserPlugin()],
+        minimizer: [
+            new TerserPlugin({
+                extractComments: false,
+            }),
+        ],
     },
 };

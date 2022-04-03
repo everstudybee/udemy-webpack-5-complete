@@ -18,4 +18,3 @@ export default class HelloWorldButton {
         body.appendChild(button);
     }
 }
-
