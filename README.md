@@ -89,6 +89,17 @@
 
 ### 22. Extracting CSS Into a Separate Bundle, Part 2
 
+1. Make changes in files as in the example
+
+### 23. Browser Caching
+
+1. Make changes in files as in the example
+2. Extra step.
+3. Move image to `dist/img`
+4. Move css to `dist/css`
+
+### 
+
 
 
 
@@ -98,7 +109,4 @@
 
 ## Learn
 
-1. How to add image to `dist/img`?
-2. Hot to take image from `src/img`? 
-3. How to add original filename to generated image filename?
-4. 
+

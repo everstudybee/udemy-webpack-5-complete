@@ -9,7 +9,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         clean: true,
-        filename: 'bundle.js',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, './dist'),
         publicPath: '/dist/',
     },
@@ -30,6 +30,9 @@ module.exports = {
                     dataUrlCondition: {
                         maxSize: 3 * 1024,
                     },
+                },
+                generator: {
+                    filename: 'img/[name].[hash][ext][query]',
                 },
             },
             {
@@ -71,8 +74,8 @@ module.exports = {
         }),
         new HtmlWebpackHarddiskPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'style.css',
-        })
+            filename: 'css/style.[contenthash].css',
+        }),
     ],
     optimization: {
         minimize: true,
