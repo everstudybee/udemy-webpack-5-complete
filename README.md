@@ -127,7 +127,21 @@
 
 1. No commit
 
-### 
+### 30. Mode
+
+1. Make changes in files as in the example
+2. [Info about modes](https://webpack.js.org/configuration/mode/#usage)
+3. Development mode use source map as default
+
+### 31. Managing Webpack Config for Production and Development Use Cases
+
+
+
+
+
+
+
+
 
 
 
