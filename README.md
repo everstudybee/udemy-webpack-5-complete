@@ -66,6 +66,14 @@
 1. Make changes in files as in the example
 2. `npm install --save-dev sass sass-loader` - install modules for Sass handling
 
+### 18. Using Latest JavaScript Features With Babel
+
+1. Make changes in files as in the example
+2. `npm install --save-dev @babel/core babel-loader @babel/preset-env @babel/plugin-proposal-class-properties` - install module for babel handling
+
+### 19. What Is Webpack Plugin?
+
+1. No commit
 
 
 

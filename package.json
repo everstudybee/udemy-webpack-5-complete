@@ -25,6 +25,10 @@
         "webpack-cli": "^4.9.2"
     },
     "devDependencies": {
+        "@babel/core": "^7.17.8",
+        "@babel/plugin-proposal-class-properties": "^7.16.7",
+        "@babel/preset-env": "^7.16.11",
+        "babel-loader": "^8.2.4",
         "css-loader": "^6.7.1",
         "html-webpack-harddisk-plugin": "^2.0.0",
         "html-webpack-plugin": "^5.5.0",

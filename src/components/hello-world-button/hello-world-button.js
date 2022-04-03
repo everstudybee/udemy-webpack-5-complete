@@ -1,12 +1,14 @@
 import './hello-world-button.scss';
 
 export default class HelloWorldButton {
+    buttonCssClass = 'hello-world-button';
+
     render () {
         const button = document.createElement('button');
         const body = document.querySelector('body');
 
         button.innerHTML = 'Hello world';
-        button.classList.add('hello-world-button');
+        button.classList.add(this.buttonCssClass);
         button.addEventListener('click', () => {
             const p = document.createElement('p');
             p.innerText = 'Hello World in paragraf!!!';
