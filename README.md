@@ -84,9 +84,10 @@
 
 ### 21. Extracting CSS Into a Separate Bundle With mini-css-extract-plugin, Part 1
 
+1. Make changes in files as in the example
+2. `npm install --save-dev mini-css-extract-plugin`
 
-
-
+### 22. Extracting CSS Into a Separate Bundle, Part 2
 
 
 

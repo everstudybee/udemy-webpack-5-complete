@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'none',
@@ -38,14 +39,14 @@ module.exports = {
             {
                 test: /\.(css)$/,
                 use: [
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                 ],
             },
             {
                 test: /\.(scss)$/,
                 use: [
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
                 ],
@@ -69,6 +70,9 @@ module.exports = {
             title: 'Hello World!!!',
         }),
         new HtmlWebpackHarddiskPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'style.css',
+        })
     ],
     optimization: {
         minimize: true,
