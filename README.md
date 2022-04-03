@@ -63,7 +63,8 @@
 
 ### 17. Handling SASS
 
-
+1. Make changes in files as in the example
+2. `npm install --save-dev sass sass-loader` - install modules for Sass handling
 
 
 

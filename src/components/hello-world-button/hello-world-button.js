@@ -1,4 +1,4 @@
-import './hello-world-button.css';
+import './hello-world-button.scss';
 
 export default class HelloWorldButton {
     render () {
@@ -7,12 +7,12 @@ export default class HelloWorldButton {
 
         button.innerHTML = 'Hello world';
         button.classList.add('hello-world-button');
-        button.addEventListener('click', ()=>{
+        button.addEventListener('click', () => {
             const p = document.createElement('p');
             p.innerText = 'Hello World in paragraf!!!';
             p.classList.add('hello-world-text');
             body.appendChild(p);
-        })
+        });
         body.appendChild(button);
     }
 }
