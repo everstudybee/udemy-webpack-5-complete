@@ -145,9 +145,13 @@
 
 1. No commit
 
+### 34. Introduction
 
+1. No commit
 
+### 35. Creating KiwiImage Component
 
+1. Make changes in files as in the example
 
 
 
