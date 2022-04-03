@@ -72,7 +72,11 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             alwaysWriteToDisk: true,
+            filename: 'index.html',
             title: 'Hello World!!!',
+            meta: {
+                description: 'Description in my file',
+            }
         }),
         new HtmlWebpackHarddiskPlugin(),
         new MiniCssExtractPlugin({

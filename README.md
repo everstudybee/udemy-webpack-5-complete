@@ -102,9 +102,17 @@
 
 1. Make changes in files as in the example
 2. In Webpack 5 this step is not necessary. It is enough to add in `output -> clean: true`
-3. 
 
+### 25. Generating HTML Files Automatically During Webpack Build Process
 
+1. No commit
+2. I did this in step 14
+
+### 26. Customizing Generated HTML Files
+
+1. Make changes in files as in the example
+
+### 
 
 
 
