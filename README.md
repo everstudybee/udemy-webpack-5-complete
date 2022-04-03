@@ -112,13 +112,29 @@
 
 1. Make changes in files as in the example
 
+### 27. Integration with Handlebars
+
+1. Make changes in files as in the example
+2. [The template option html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin/blob/main/docs/template-option.md)
+3. `npm install --save-dev handlebars-loader`
+4. `npm install --save handlebars`
+
+### 28. More Webpack Plugins
+
+1. No commit
+
+### 29. Introduction
+
+1. No commit
+
 ### 
-
-
-
 
 
 
 ## Learn
 
+## Icons
 
+1. https://handlebarsjs.com/
+2. https://babeljs.io/
+3. https://ejs.co/

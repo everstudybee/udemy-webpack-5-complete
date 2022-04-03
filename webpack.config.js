@@ -67,16 +67,21 @@ module.exports = {
                     },
                 },
             },
+            {
+                test: /\.(hbs)$/,
+                use: [
+                    'handlebars-loader',
+                ],
+            },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
             alwaysWriteToDisk: true,
             filename: 'index.html',
+            template: 'src/html/index.hbs',
             title: 'Hello World!!!',
-            meta: {
-                description: 'Description in my file',
-            }
+            description: 'Description in my file',
         }),
         new HtmlWebpackHarddiskPlugin(),
         new MiniCssExtractPlugin({
