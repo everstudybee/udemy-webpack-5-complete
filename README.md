@@ -168,6 +168,10 @@
 1. Make changes in files as in the example
 2. `npm install --save lodash`
 
+### 39. Setting Custom Options for Code Splitting
+
+1. Make changes in files as in the example
+
 
 
 

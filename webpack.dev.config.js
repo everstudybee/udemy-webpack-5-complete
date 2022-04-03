@@ -112,6 +112,7 @@ module.exports = {
         ],
         splitChunks: {
             chunks: 'all',
+            minSize: 3072,
         }
     },
 };
