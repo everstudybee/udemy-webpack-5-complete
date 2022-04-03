@@ -135,6 +135,10 @@
 
 ### 31. Managing Webpack Config for Production and Development Use Cases
 
+1. Make changes in files as in the example
+
+
+
 
 
 

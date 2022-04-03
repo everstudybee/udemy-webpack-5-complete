@@ -1,8 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development',
@@ -11,7 +9,7 @@ module.exports = {
     },
     output: {
         clean: true,
-        filename: '[name].[contenthash].js',
+        filename: '[name].js',
         path: path.resolve(__dirname, './dist'),
         publicPath: '/dist/',
     },
@@ -44,14 +42,14 @@ module.exports = {
             {
                 test: /\.(css)$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    'style-loader',
                     'css-loader',
                 ],
             },
             {
                 test: /\.(scss)$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    'style-loader',
                     'css-loader',
                     'sass-loader',
                 ],
@@ -84,16 +82,5 @@ module.exports = {
             description: 'Description in my file',
         }),
         new HtmlWebpackHarddiskPlugin(),
-        new MiniCssExtractPlugin({
-            filename: 'css/style.[contenthash].css',
-        }),
     ],
-    optimization: {
-        minimize: true,
-        minimizer: [
-            new TerserPlugin({
-                extractComments: false,
-            }),
-        ],
-    },
 };
