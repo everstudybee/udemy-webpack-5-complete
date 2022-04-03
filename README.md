@@ -75,6 +75,24 @@
 
 1. No commit
 
+### 20. Minification of the Resulting Webpack Bundle
+
+1. Make changes in files as in the example
+2. Webpack v5 comes with the latest terser-webpack-plugin out of the box.
+3. Install only if you want to customize the options for example turn off this plugin
+4. `npm install --save-dev terser-webpack-plugin`
+
+### 21. Extracting CSS Into a Separate Bundle With mini-css-extract-plugin, Part 1
+
+
+
+
+
+
+
+
+
+
 
 
 ## Learn
