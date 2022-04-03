@@ -1,5 +1,6 @@
 import duck from './duck.jpg';
 import favicon from './favicon.svg';
+import altText from './altText.txt';
 
 export default function () {
     const body = document.querySelector('body');
@@ -7,10 +8,12 @@ export default function () {
     const head = document.querySelector('head');
     const link = document.createElement('link');
 
-    img.alt = 'Duck';
+    img.alt = altText;
     img.width = 300;
     img.src = duck;
     body.appendChild(img);
+
+    console.log(img);
 
     link.rel = 'icon';
     link.href = favicon;

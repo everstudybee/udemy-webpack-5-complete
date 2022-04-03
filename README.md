@@ -46,6 +46,16 @@
 
 ### 14. Asset/source Module Type
 
+1. Make changes in files as in the example
+2. Extra step.
+3. `npm install --save-dev html-webpack-plugin` - Install [HtmlWebpackPlugin](https://github.com/jantimon/html-webpack-plugin#install)
+4. `npm install --save-dev html-webpack-harddisk-plugin` - [HtmlWebpackHarddiskPlugin](https://github.com/jantimon/html-webpack-harddisk-plugin#installation) necessary to working with `devServer` and HMR
+
+
+
+
+
+
 
 
 ## Learn

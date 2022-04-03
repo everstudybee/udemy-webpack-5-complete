@@ -1,4 +1,6 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
 module.exports = {
     mode: 'none',
@@ -28,6 +30,17 @@ module.exports = {
                     },
                 },
             },
+            {
+                test: /\.(txt)$/,
+                type: 'asset/source',
+            },
         ],
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            alwaysWriteToDisk: true,
+            title: 'Hello World!!!',
+        }),
+        new HtmlWebpackHarddiskPlugin(),
+    ],
 };
